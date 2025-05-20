@@ -27,7 +27,7 @@ from qdrant_client.http.exceptions import UnexpectedResponse
 # -----------------------------------------------------------------------------
 # 🔧 Config (env overrideable)
 # -----------------------------------------------------------------------------
-QDRANT_HOST = os.getenv("QDRANT_HOST", "host.docker.internal")  # use Qdrant Cloud or Docker host
+QDRANT_HOST = os.getenv("QDRANT_HOST", "qdrant") # use Qdrant Cloud or Docker host
 QDRANT_PORT = int(os.getenv("QDRANT_PORT", "6333"))
 QDRANT_TIMEOUT = float(os.getenv("QDRANT_TIMEOUT", "10.0"))
 
