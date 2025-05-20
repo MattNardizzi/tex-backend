@@ -1,44 +1,27 @@
 version: "3.9"
 
-volumes:
-  qdrant_data:
-
-networks:
-  tex_net:
-    driver: bridge             # ← defines the network both services reference
-
 services:
-  # 1️⃣ Qdrant Vector DB
+  tex:
+    build:
+      context: .
+    container_name: tex-dev
+    ports:
+      - "5050:5050"
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - qdrant
+    restart: on-failure
+    environment:
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: 6333
+    command: gunicorn backend.tex_core_api:app --workers 2 --bind 0.0.0.0:5050
+
   qdrant:
-    image: qdrant/qdrant:latest
+    image: qdrant/qdrant
     container_name: qdrant
     ports:
       - "6333:6333"
-    volumes:
-      - qdrant_data:/qdrant/storage
-    networks:
-      - tex_net
-    restart: unless-stopped
-    # (health-check removed for now)
-
-  # 2️⃣ Tex Core (Python backend / gateway)
-  tex-core:
-    build:
-      context: .
-      dockerfile: Dockerfile          # or Dockerfile.core – whatever you used
-      target: tex-core
-    container_name: tex-core
-    command: python tex_gateway.py    # starts FastAPI / Flask gateway
-    environment:
-      TEX_VECTOR_HOST: qdrant         # service-name = hostname
-      TEX_VECTOR_PORT: "6333"
-      NEXT_PUBLIC_POLYGON_API_KEY: RIQw4eDdxaBB_p9zmMLgckNzU7_GA0aV
-    volumes:
-      - ./:/app                       # live-reload during dev
-    ports:
-      - "8000:8000"                   # http://localhost:8000
-    networks:
-      - tex_net
-    depends_on:
-      - qdrant                        # plain depends_on (no health-check)
-    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "true"]  # Simplified to always return healthy

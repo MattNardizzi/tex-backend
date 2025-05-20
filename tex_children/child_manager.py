@@ -9,6 +9,7 @@ import json
 import random
 import uuid
 from datetime import datetime
+from typing import Optional
 
 from tex_children.aeondelta import AeonDelta
 from tex_children.tex_child_002 import TexChild002
@@ -21,7 +22,7 @@ class TexChildren:
     def __init__(self):
         self.children = []
 
-    def spawn_child(self, archetype: str = "AeonDelta", spawn_packet: dict | None = None):
+    def spawn_child(self, archetype: str = "AeonDelta", spawn_packet: Optional[dict] = None):
         """Spawns a new autonomous child agent and returns its ID and instance/traits."""
         child_id  = f"TEX-CHILD-{str(uuid.uuid4())[:8]}"
         timestamp = datetime.utcnow().isoformat()
@@ -83,7 +84,7 @@ class TexChildren:
     # INTERNAL UTILITY METHODS
     # --------------------------------------------------
 
-    def _log_spawn_event(self, child_id: str, archetype: str, timestamp: str, parent: str, traits: dict | None = None):
+    def _log_spawn_event(self, child_id: str, archetype: str, timestamp: str, parent: str, traits: Optional[dict] = None):
         entry = {
             "child_id":  child_id,
             "archetype": archetype,

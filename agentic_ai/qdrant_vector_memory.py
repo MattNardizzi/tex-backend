@@ -74,17 +74,22 @@ _client: QdrantClient = _init_client()
 # 🚀 Safe, idempotent collection creation
 # -----------------------------------------------------------------------------
 def _ensure_collection() -> None:
-    existing = {c.name for c in _client.get_collections().collections}
-    if COLLECTION not in existing:
-        print(f"[QDRANT] 🌀 Creating collection '{COLLECTION}' (size={VECTOR_SIZE})")
+    try:
+        print(f"[QDRANT] 🌀 Ensuring collection '{COLLECTION}' exists...")
         _client.create_collection(
             collection_name=COLLECTION,
-            vectors_config=qdrant.VectorParams(size=VECTOR_SIZE, distance=DISTANCE),
+            vectors_config=qdrant.VectorParams(
+                size=VECTOR_SIZE,
+                distance=DISTANCE,
+            ),
         )
-    else:
-        print(f"[QDRANT] 📚 Collection '{COLLECTION}' already exists – skipping")
-
-_ensure_collection()
+        print(f"[QDRANT] ✅ Collection '{COLLECTION}' created successfully.")
+    except qdrant.exceptions.UnexpectedResponse as e:
+        if "already exists" in str(e):
+            print(f"[QDRANT] 📚 Collection '{COLLECTION}' already exists — skipping creation.")
+        else:
+            print(f"[QDRANT] ❌ Unexpected error: {e}")
+            raise e
 
 
 # -----------------------------------------------------------------------------
