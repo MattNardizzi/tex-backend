@@ -1,0 +1,194 @@
+[
+    {
+        "future_title": "Currency collapse",
+        "confidence": 0.48,
+        "predicted_at": "2025-05-18 22:13:01.483439",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Oil price spike",
+        "confidence": 0.7,
+        "predicted_at": "2025-05-18 22:13:01.486560",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Inflation surge",
+        "confidence": 0.84,
+        "predicted_at": "2025-05-18 22:13:01.486719",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Currency collapse",
+        "confidence": 0.54,
+        "predicted_at": "2025-05-18 22:13:01.489076",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Inflation surge",
+        "confidence": 0.88,
+        "predicted_at": "2025-05-18 22:13:01.491128",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "AI regulation crackdown",
+        "confidence": 0.57,
+        "predicted_at": "2025-05-18 22:13:01.492176",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Inflation surge",
+        "confidence": 0.71,
+        "predicted_at": "2025-05-18 22:13:19.105501",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Tech sector rally",
+        "confidence": 0.75,
+        "predicted_at": "2025-05-18 22:13:19.105770",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Oil price spike",
+        "confidence": 0.82,
+        "predicted_at": "2025-05-18 22:13:19.105870",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Tech sector rally",
+        "confidence": 0.83,
+        "predicted_at": "2025-05-18 22:21:49.838472",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Currency collapse",
+        "confidence": 0.79,
+        "predicted_at": "2025-05-18 22:21:49.839962",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "AI regulation crackdown",
+        "confidence": 0.59,
+        "predicted_at": "2025-05-18 22:21:49.840644",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Inflation surge",
+        "confidence": 0.61,
+        "predicted_at": "2025-05-18 22:21:49.842580",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Currency collapse",
+        "confidence": 0.64,
+        "predicted_at": "2025-05-18 22:21:49.842793",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Oil price spike",
+        "confidence": 0.61,
+        "predicted_at": "2025-05-18 22:21:49.843504",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Currency collapse",
+        "confidence": 0.67,
+        "predicted_at": "2025-05-18 22:22:02.257543",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Oil price spike",
+        "confidence": 0.55,
+        "predicted_at": "2025-05-18 22:22:02.258022",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Tech sector rally",
+        "confidence": 0.84,
+        "predicted_at": "2025-05-18 22:22:02.258209",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Inflation surge",
+        "confidence": 0.58,
+        "predicted_at": "2025-05-19 19:31:37.930952",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Currency collapse",
+        "confidence": 0.44,
+        "predicted_at": "2025-05-19 19:31:37.932687",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Oil price spike",
+        "confidence": 0.57,
+        "predicted_at": "2025-05-19 19:31:37.932917",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "AI regulation crackdown",
+        "confidence": 0.56,
+        "predicted_at": "2025-05-19 19:31:37.933584",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Currency collapse",
+        "confidence": 0.6,
+        "predicted_at": "2025-05-19 19:31:37.934539",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    },
+    {
+        "future_title": "Tech sector rally",
+        "confidence": 0.85,
+        "predicted_at": "2025-05-19 19:31:37.935360",
+        "realized": false,
+        "strategy_bias": null,
+        "drift_notes": []
+    }
+]

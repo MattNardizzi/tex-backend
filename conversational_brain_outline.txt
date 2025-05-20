@@ -1,0 +1,7 @@
+89:class TexConversationalBrain:
+90:    def __init__(self):
+135:    def start_breathing_cycle(self):
+136:        def breathing_loop():
+435:    def greet(self):
+441:    def speak(self, text, emotion="neutral"):
+469:    def interactive_conversation(self, user_input=None):

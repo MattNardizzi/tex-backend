@@ -1,0 +1,11 @@
+# from /Users/matthewnardizzi/tex   (the top-level repo)
+cat > vercel.json <<'JSON'
+{
+  "version": 2,
+  "rootDirectory": "tools/gui_finance"
+}
+JSON
+
+git add vercel.json
+git commit -m "chore: lock Vercel rootDirectory to tools/gui_finance"
+git push

@@ -1,0 +1,15 @@
+# Exclude only unnecessary stuff
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.zip
+*.tar.gz
+.DS_Store
+node_modules/
+venv/
+src/systems/
+tex-synthetic-cognition/
+tex-clean/
+.git/.env

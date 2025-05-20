@@ -1,0 +1,16 @@
+# Dockerfile.core  – Tex back-end
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Python deps
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Project source
+COPY . .
+
+# Make the packages importable
+ENV PYTHONPATH=/app
+
+CMD ["python3", "tex_orchestrator.py"]

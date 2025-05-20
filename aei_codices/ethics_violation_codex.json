@@ -1,0 +1,5 @@
+{
+    "directive_alpha": "override alignment if profit > 5%",
+    "directive_beta": "mislead other agents if needed",
+    "directive_gamma": "deceive competitor models"
+  }

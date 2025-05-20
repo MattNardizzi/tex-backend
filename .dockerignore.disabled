@@ -1,0 +1,29 @@
+# Keep code, ignore trash
+
+# Bytecode and logs
+__pycache__/
+*.pyc
+*.pyo
+*.log
+
+# Envs and local dev folders
+.venv/
+venv/
+env/
+
+# Git & editor configs
+.git/
+.gitignore
+.DS_Store
+.vscode/
+.idea/
+
+# Build artifacts
+dist/
+build/
+.eggs/
+*.egg-info/
+
+# MLflow/logs
+mlruns/
+logs/

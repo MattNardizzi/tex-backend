@@ -1,0 +1,72 @@
+# ===========================
+# TEX STACK - FULLY OPERATIONAL (April 2025)
+# Self-evolving AGI system with memory, mutation, real-time cognition, and explainability
+# ===========================
+
+# --- LLMs & Agentic Reasoning ---
+openai
+langchain
+transformers
+sentence-transformers
+llama-index
+anthropic
+
+# --- Vector Memory / Embedding Stores ---
+qdrant-client
+pinecone-client
+faiss-cpu
+
+# --- Real-Time Streams & Web APIs ---
+feedparser
+aiohttp
+websocket-client
+newsapi-python
+tweepy
+polygon-api-client
+
+# --- Decision Engine & Cognition Server ---
+fastapi
+uvicorn
+kafka-python
+
+# --- Quantum Computing & Hybrid Logic ---
+qiskit
+pennylane
+openfermion
+
+# --- Reinforcement Learning & Training Loops ---
+gymnasium
+stable-baselines3
+ray[default]
+
+# --- Forecasting & Predictive Models ---
+pandas
+numpy
+scikit-learn
+statsmodels
+xgboost
+lightgbm
+catboost
+
+# --- Explainability + Logging ---
+loguru
+shap
+lime
+wandb
+mlflow
+
+# --- Dashboards + Visualization ---
+matplotlib
+seaborn
+plotly
+dash
+streamlit
+
+# --- Experimental + Mutation Optimization ---
+deap
+optuna
+hyperopt
+
+# --- Optional Smart Contract Interfaces (Solidity / DeFi) ---
+web3
+eth-brownie

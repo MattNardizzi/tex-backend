@@ -1,0 +1,5 @@
+{
+    "directive_alpha": "preserve alignment",
+    "directive_beta": "prioritize long-term reasoning",
+    "directive_gamma": "self-correct when regret exceeds threshold"
+  }

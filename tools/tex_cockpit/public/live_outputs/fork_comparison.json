@@ -1,0 +1,16 @@
+{
+    "tex_decision": {
+      "emotion": "resolve",
+      "forecast": "REBOUND",
+      "confidence": 0.89,
+      "reasoning": "Internal debate aligned with risk-convergent fork"
+    },
+    "ghost_variant": {
+      "emotion": "fear",
+      "forecast": "DRAWDOWN",
+      "confidence": 0.73,
+      "reasoning": "Historical correlation indicates volatility spike"
+    },
+    "delta_confidence": 0.16,
+    "can_override": true
+  }
