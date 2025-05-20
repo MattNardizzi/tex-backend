@@ -3,7 +3,7 @@
 # ───────────────────────────────────────────
 FROM python:3.11-slim AS builder
 
-# OS libs needed for Torch, XGBoost, Graphviz, etc.
+# Install essential build tools and dependencies
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     build-essential g++ git curl wget cmake pkg-config \
     libopenblas-dev liblapack-dev libatlas-base-dev \
@@ -12,6 +12,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 
 WORKDIR /wheels
 
+# Copy and build all Python package wheels
 COPY requirements.txt .
 RUN pip wheel --no-cache-dir -r requirements.txt
 
@@ -20,7 +21,7 @@ RUN pip wheel --no-cache-dir -r requirements.txt
 # ───────────────────────────────────────────
 FROM python:3.11-slim
 
-# Runtime dependencies (no compilers needed here)
+# Install only runtime dependencies (no compilers)
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     libopenblas0-pthread liblapack3 libatlas3-base \
     libgl1 libglib2.0-0 graphviz \
@@ -28,14 +29,20 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 
 WORKDIR /app
 
-# Copy prebuilt wheels from Stage 1 and install them
+# Bring in pre-built wheels from builder stage
 COPY --from=builder /wheels /wheels
+
+# Also need the requirements file again to tell pip what to install
 COPY requirements.txt .
+
+# Install dependencies from the wheels (offline, no PyPI)
 RUN pip install --no-cache-dir --no-index --find-links=/wheels -r requirements.txt
 
-# Copy the entire project
+# Copy the full application source
 COPY . .
 
-# Gunicorn will serve Flask API on port 8000
+# Expose the port your Flask app runs on
 EXPOSE 8000
+
+# Launch Tex’s Flask API using Gunicorn
 CMD ["gunicorn", "-w", "4", "-k", "gthread", "-b", "0.0.0.0:8000", "backend.tex_core_api:app"]
